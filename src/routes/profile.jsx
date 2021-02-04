@@ -1,11 +1,16 @@
+import { authService } from '../firebase';
 import React from 'react';
-
-const Profile = () => {
+export default () => {
+    // const history = useHistory();
+    const onLogOutClick = () => {
+      authService.signOut();
+      // history.push("/");
+    };
+   
     return (
-        <div>
-            profile
-        </div>
+      <>  
+        Profile
+        <button onClick={onLogOutClick}>Log Out</button>
+      </>
     );
-};
-
-export default AutProfile;
+  };
