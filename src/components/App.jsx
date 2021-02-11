@@ -22,6 +22,7 @@ function App() {
    }, []);
 
    const refreshUser = () =>{
+    console.log('app');
      const user = authService.currentUser;
      setUserObj({
        displayName : user.displayName, 
@@ -31,7 +32,6 @@ function App() {
    };
 
   return (
-    console.log('home');
     <>
       {init ? <AppRouter 
       refreshUser={refreshUser}

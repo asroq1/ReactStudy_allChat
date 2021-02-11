@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Auth = () => {
+     console.log("auth...")
     const onSocialClick =  async(event) =>{
         const {target : {name} } = event;
         let provider;
@@ -22,7 +23,6 @@ const Auth = () => {
         await authService.signInWithPopup(provider);
     }
     return (
-        console.log("auth...");
         <div className="authContainer">
         <FontAwesomeIcon
           icon={faTwitter}
