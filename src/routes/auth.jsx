@@ -22,6 +22,7 @@ const Auth = () => {
         await authService.signInWithPopup(provider);
     }
     return (
+        console.log("auth...");
         <div className="authContainer">
         <FontAwesomeIcon
           icon={faTwitter}
